@@ -1,0 +1,20 @@
+This info was taken directly from the FOB sales website:
+
+I used this info to erase the FOB then from the ESP-Home device GUI I enabled the Transmitter to the buttons 1 at a time.
+Once programed use the Receiver code to test the FOB data.
+
+
+
+
+How to Program 433Mhz Remote:
+
+Step 1 –Delete the existing code of our remote duplicator
+1)Click and Hold A and B buttons together - Led will flash 3 times
+2)Keep holding A button and release B button
+3)Keep holding A button and push B button 3 times, Led will start flashing Non-stop
+Now press any key on the remote control, LED lights are not bright, so delete code success; if you press the button LED lamp is lit, indicating that the original code is not deleted!
+
+Step 2 - Clone your original remote
+1)Put both remotes Into back to Back position. Make sure they have direct-contact
+2)Click and hold 1 button on your original remote and 1 button on your clone remote. Keep holding until led will make 2 blinks then 3 blinks then goes into Steady and you have successfully cloned. ( the left keys follow the same above operation)
+If for some reason the clone does not go further then 2 blinks , it means the signal does not go through, please shift the remote slowly up and down until you get the point where it will go through.
