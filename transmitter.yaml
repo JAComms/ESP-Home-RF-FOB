@@ -1,0 +1,49 @@
+
+remote_transmitter:
+  pin: 
+    number: GPIO14
+    mode: INPUT
+    inverted: False
+  carrier_duty_percent: 100%
+  rmt_channel: 4
+  
+switch:
+  - platform: template
+    name: "RF FOB Button A"
+    turn_on_action:
+      - remote_transmitter.transmit_rc_switch_raw:
+          code: '110010100100000100110001'
+          protocol: 1
+          repeat:
+            times: 50
+            wait_time: 0ms
+
+  - platform: template
+    name: "RF FOB Button B"
+    turn_on_action:
+      - remote_transmitter.transmit_rc_switch_raw:
+          code: '110010100100000100110010'
+          protocol: 1
+          repeat:
+            times: 50
+            wait_time: 0ms
+
+  - platform: template
+    name: "RF FOB Button C"
+    turn_on_action:
+      - remote_transmitter.transmit_rc_switch_raw:
+          code: '110010100100000100110011'
+          protocol: 1
+          repeat:
+            times: 50
+            wait_time: 0ms
+
+  - platform: template
+    name: "RF FOB Button D"
+    turn_on_action:
+      - remote_transmitter.transmit_rc_switch_raw:
+          code: '110010100100000100110100'
+          protocol: 1
+          repeat:
+            times: 50
+            wait_time: 0ms
