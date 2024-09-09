@@ -1,0 +1,47 @@
+
+remote_receiver:
+  pin: 
+    number: GPIO9
+    mode: INPUT
+    inverted: True
+  dump:
+    - rc_switch #Decode and dump RCSwitch RF codes.
+  tolerance: 60% 
+  filter: 250us
+  idle: 4ms
+  buffer_size: 16kb
+  rmt_channel: 4
+
+binary_sensor:
+  - platform: remote_receiver
+    name: RF Button Keyfob1A
+    rc_switch_raw:
+      protocol: 6
+      code: '110010100100000100110001'
+    filters:
+      - delayed_off: 100ms
+
+  - platform: remote_receiver
+    name: RF Button Keyfob1B
+    rc_switch_raw:
+      protocol: 6
+      code: '110010100100000100110010'
+    filters:
+      - delayed_off: 100ms
+
+  - platform: remote_receiver
+    name: RF Button Keyfob1C
+    rc_switch_raw:
+      protocol: 6
+      code: '110010100100000100110011'
+    filters:
+      - delayed_off: 100ms
+
+  - platform: remote_receiver
+    name: RF Button Keyfob1D
+    rc_switch_raw:
+      protocol: 6
+      code: '110010100100000100110100'
+
+    filters:
+      - delayed_off: 100ms        
